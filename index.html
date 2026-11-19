@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Personal academic homepage — research, publications, and projects.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Bing Yuan · Personal Homepage</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="profile.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><div class="nav-wrap">
+    <a class="wordmark" href="#about" aria-label="Home"><span class="monogram">Bing Yuan</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#more" data-i18n="experience">Experience</a><a href="#publications" data-i18n="publications">Publications</a>
+    </nav>
+    <button id="language" class="language" type="button" aria-label="Switch to Chinese">中文</button>
+  </div></header>
+  <main id="main">
+    <section id="about" class="intro" aria-labelledby="name">
+      <div class="intro-copy">
+        <h1 id="name">Bing Yuan <span>袁冰</span></h1>
+        <div id="bio" class="bio"></div>
+        <div id="socials" class="socials" aria-label="Profile links"></div>
+      </div>
+      <figure class="portrait"><img id="portrait" src="assets/photo.svg" alt="Portrait of Bing Yuan" width="250" height="250"></figure>
+    </section>
+    <section id="more" class="section" aria-labelledby="experience-title"><div class="section-heading"><h2 id="experience-title" data-i18n="experience">Experience</h2></div><div id="experience-list"></div></section>
+    <section id="publications" class="section publications" aria-labelledby="pub-title">
+      <div class="section-heading publication-heading"><h2 id="pub-title" data-i18n="publications">Publications</h2><div class="segmented" role="group" aria-label="Publication filter"><button type="button" data-filter="selected" aria-pressed="true" data-i18n="selected">Selected</button><button type="button" data-filter="all" aria-pressed="false" data-i18n="all">All</button></div></div>
+      <div id="publication-list"></div>
+    </section>
+  </main>
+  <footer><span id="copyright"></span><a href="#about" data-i18n="backToTop">Back to top</a></footer>
+  <noscript><p class="noscript">Please enable JavaScript to display this profile. / 请启用 JavaScript 查看主页内容。</p></noscript>
+</body>
+</html>
