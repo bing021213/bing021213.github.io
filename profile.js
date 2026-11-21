@@ -64,7 +64,7 @@ window.PROFILE = {
         "links": {
             "abstract": "",
             "github": "https://github.com/bing021213/HOLMES",
-            "project": "",
+            "project": "https://bing021213.github.io/HOLMES/",
             "paper": "",
             "bibtex": ""
         },
