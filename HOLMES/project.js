@@ -12,7 +12,7 @@ window.HOLMES_PROJECT = {
   repository: "https://github.com/bing021213/HOLMES",
   platformVideo: "assets/platform.mp4",
   platformPoster: "assets/platform-poster.jpg",
-  researchVideo: "assets/research-video.mp4",
-  researchVideoPoster: "assets/research-poster.jpg",
+  researchVideo: "assets/research-video.mp4?v=5a5cb3d29f",
+  researchVideoPoster: "assets/research-poster.jpg?v=e523d4c17f",
   softwareCitation: "@software{yuan_holmes,\n  author = {Yuan, Bing},\n  title = {HOLMES},\n  version = {0.1.2.dev0},\n  url = {https://github.com/bing021213/HOLMES}\n}"
 };
