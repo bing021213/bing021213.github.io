@@ -18,21 +18,23 @@
       anchor.setAttribute("aria-disabled", "true"); anchor.setAttribute("tabindex", "-1"); anchor.title = "Coming soon";
     }
   });
-  const platform = document.getElementById("platform-video");
-  const platformUrl = safeUrl(config.platformVideo);
-  if (platformUrl) {
-    platform.querySelector("source").src = platformUrl;
-    platform.poster = safeUrl(config.platformPoster);
-    platform.load();
-  }
-  const researchUrl = safeUrl(config.researchVideo);
-  if (researchUrl) {
-    const video = document.getElementById("research-video");
-    video.src = researchUrl;
-    if (config.researchVideoPoster) video.poster = safeUrl(config.researchVideoPoster);
+  const configureVideo = (id, source, poster) => {
+    const video = document.getElementById(id);
+    const url = safeUrl(source);
+    if (!video || !url) return;
+    const sourceNode = video.querySelector("source");
+    const currentUrl = sourceNode ? sourceNode.src : video.src;
+    if (currentUrl !== url) {
+      if (sourceNode) sourceNode.src = url;
+      else video.src = url;
+      video.load();
+    }
+    const posterUrl = safeUrl(poster);
+    if (posterUrl) video.poster = posterUrl;
     video.hidden = false;
-    document.getElementById("research-video-placeholder").hidden = true;
-  }
+  };
+  configureVideo("platform-video", config.platformVideo, config.platformPoster);
+  configureVideo("research-video", config.researchVideo, config.researchVideoPoster);
   const citation = document.getElementById("software-citation");
   citation.textContent = config.softwareCitation;
   const repository = document.getElementById("repository-url");

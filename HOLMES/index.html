@@ -11,9 +11,9 @@
   <meta property="og:url" content="https://bing021213.github.io/HOLMES/">
   <meta property="og:image" content="https://bing021213.github.io/HOLMES/assets/holmes-banner.png">
   <title>HOLMES · Behavioral development in primate families</title>
-  <link rel="stylesheet" href="style.css?v=2c3ba7635b">
-  <script src="project.js" defer></script>
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=a0c1e9716b">
+  <script src="project.js?v=a1d6e831aa" defer></script>
+  <script src="app.js?v=c8d7c8ef2d" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -72,9 +72,12 @@
       </section>
       <section id="video" class="video-section" aria-labelledby="video-title">
         <h2 id="video-title">Video</h2>
-        <p>Research overview and demonstrations.</p>
-        <div class="video-placeholder" id="research-video-placeholder"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="20"/><path d="m20 15 14 9-14 9z"/></svg><span>Research video coming soon.</span></div>
-        <video id="research-video" controls playsinline preload="none" aria-label="HOLMES research video" hidden></video>
+        <div class="video-frame">
+          <div class="video-frame-bar"><span class="video-frame-mark" aria-hidden="true"></span><span>HOLMES</span></div>
+          <div class="video-frame-screen">
+            <video id="research-video" controls playsinline preload="metadata" poster="assets/research-poster.jpg" width="1920" height="1080" aria-label="HOLMES research video"><source src="assets/research-video.mp4" type="video/mp4">Your browser cannot play this video. <a href="assets/research-video.mp4">Download the research video.</a></video>
+          </div>
+        </div>
       </section>
     </div>
 
